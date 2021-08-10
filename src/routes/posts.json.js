@@ -1,5 +1,15 @@
 export async function get() {
-	const query = `*[_type=="post"]{title,slug{current},author->{name}}`;
+	const query = encodeURIComponent(`
+	*
+	[_type=="post"]
+	{
+		title,
+		slug{current},
+		mainImage{"imageUrl": asset -> {url}},
+		altImageText,
+		author->{name}
+	}
+`);
 	const url = import.meta.env.VITE_SANITYCMS_URL + query;
 
 	const parsedPosts = await fetch(url).then((res) => res.json());

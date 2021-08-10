@@ -23,5 +23,11 @@
 		"cssnano": "^5.0.6",
 		"tailwindcss": "^2.2.4"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@sanity/block-content-to-html": "^2.0.0",
+		"@tailwindcss/typography": "^0.4.1",
+		"daisyui": "^1.11.0",
+		"theme-change": "^2.0.2"
+	}
 }
