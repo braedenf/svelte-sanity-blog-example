@@ -11,7 +11,7 @@
 </script>
 
 <header>
-	<div class="flex navbar justify-between bg-base-100">
+	<div class="flex navbar justify-between bg-base-100 drop-shadow-md">
 		<label on:click={menuClicked} for="mobile-drawer" class="btn btn-ghost btn-circle">
 			{#if !menuOpen}
 				<svg
